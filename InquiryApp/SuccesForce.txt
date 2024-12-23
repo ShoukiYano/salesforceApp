@@ -1,0 +1,7 @@
+Successfully authorized yano@driveline.sandbox with org ID 00DGA000009nuUV2AY
+
+┌──┬───────┬────────────────────────┬─────────┬───────┐
+│  │ Alias │ Username               │ Org Id             │ Status    │
+├──┼───────┼────────────────────────┼─────────┼───────┤
+│  │       │ yano@driveline.sandbox │ 00DGA000009nuUV2AY │ Connected │
+└──┴───────┴────────────────────────┴─────────┴───────┘

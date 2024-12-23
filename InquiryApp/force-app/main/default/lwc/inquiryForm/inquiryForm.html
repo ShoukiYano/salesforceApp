@@ -1,0 +1,55 @@
+<template>
+    <lightning-card title="問い合わせフォーム" icon-name="action:new">
+        <div class="slds-p-around_medium">
+            <!-- 名前 -->
+            <lightning-input 
+                label="名前" 
+                name="name" 
+                value={name} 
+                onchange={handleInputChange} 
+                class="field">
+            </lightning-input>
+            <template if:true={errors.name}>
+                <p class="error">{errors.name}</p>
+            </template>
+
+            <!-- メール -->
+            <lightning-input 
+                label="メールアドレス" 
+                name="email" 
+                type="email" 
+                value={email} 
+                onchange={handleInputChange} 
+                class="field">
+            </lightning-input>
+            <template if:true={errors.email}>
+                <p class="error">{errors.email}</p>
+            </template>
+
+            <!-- 問い合わせ内容 -->
+            <lightning-textarea 
+                label="問い合わせ内容" 
+                name="description" 
+                value={description} 
+                onchange={handleInputChange} 
+                class="field">
+            </lightning-textarea>
+            <template if:true={errors.description}>
+                <p class="error">{errors.description}</p>
+            </template>
+
+            <!-- 送信ボタン -->
+            <lightning-button 
+                label="送信" 
+                variant="brand" 
+                onclick={handleSubmit} 
+                disabled={isLoading}>
+            </lightning-button>
+
+            <!-- スピナー -->
+            <template if:true={isLoading}>
+                <lightning-spinner alternative-text="送信中..."></lightning-spinner>
+            </template>
+        </div>
+    </lightning-card>
+</template>

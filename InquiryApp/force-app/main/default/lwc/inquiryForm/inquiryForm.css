@@ -1,0 +1,72 @@
+/* カード全体のスタイル */
+.slds-card {
+    background: linear-gradient(to bottom, #ffffff, #f9f9f9);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 入力フィールド */
+.field {
+    font-family: Arial, sans-serif;
+}
+
+.lightning-input, .lightning-textarea {
+    border: 2px solid #dcdcdc;
+    border-radius: 6px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.lightning-input:focus, .lightning-textarea:focus {
+    border-color: #5b9bd5;
+    box-shadow: 0 0 4px rgba(91, 155, 213, 0.5);
+}
+
+/* エラーメッセージ */
+.error {
+    color: #e74c3c;
+    font-size: 0.85rem;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+}
+
+/* 送信ボタン */
+.lightning-button {
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    background: #4caf50;
+    color: white;
+    border-radius: 8px;
+    padding: 0.8rem 1.2rem;
+    transition: background 0.3s ease-in-out;
+}
+
+.lightning-button:hover {
+    background: #45a049;
+}
+
+/* スピナー */
+.lightning-spinner {
+    margin: 1rem auto;
+}
+
+/* メディアクエリ: モバイル対応 */
+@media screen and (max-width: 768px) {
+    .slds-card {
+        padding: 1rem;
+    }
+
+    .field {
+        margin-bottom: 1rem;
+    }
+
+    .lightning-input, .lightning-textarea {
+        font-size: 0.9rem;
+    }
+
+    .lightning-button {
+        font-size: 0.9rem;
+    }
+}
