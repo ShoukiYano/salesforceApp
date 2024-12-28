@@ -1,0 +1,66 @@
+.pagination {
+    margin:10px 0 10px 10px;
+}
+
+span {
+    
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/* Lightning Card Styling */
+.lightning-card {
+    border: 5px solid red; /* 赤い枠線を追加 */
+    background-color: #f4f6f9; /* 明るいグレー */
+    border-radius: 10px; /* 角を丸く */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 柔らかい影 */
+    padding: 20px; /* 余白 */
+    margin: 20px auto; /* カードを中央揃え */
+    max-width: 800px; /* 最大幅 */
+}
+
+/* Lightning Datatable Styling */
+.lightning-datatable {
+    margin-top: 15px; /* 上部余白 */
+    border: 1px solid #e0e0e0; /* 外枠 */
+    border-radius: 5px; /* 角を丸く */
+    background-color: #ffffff; /* 背景を白に */
+    overflow: hidden; /* 境界内に収める */
+}
+
+/* Datatable Header */
+.lightning-datatable thead th {
+    background-color: #0070d2; /* Salesforceブルー */
+    color: white; /* ヘッダー文字色を白に */
+    font-weight: bold;
+    text-align: left; /* 左揃え */
+    padding: 10px; /* 内側余白 */
+    border-bottom: 2px solid #005bb5; /* 境界線 */
+}
+
+/* Datatable Rows */
+.lightning-datatable tbody tr {
+    transition: background-color 0.2s ease; /* 背景色変更のアニメーション */
+}
+
+.lightning-datatable tbody tr:hover {
+    background-color: #f1f1f1; /* ホバー時の背景色 */
+}
+
+/* Datatable Cells */
+.lightning-datatable tbody td {
+    padding: 10px; /* セル内余白 */
+    font-size: 14px; /* 文字サイズ */
+    border-bottom: 1px solid #e0e0e0; /* セル間の境界線 */
+}
+
+/* Lightning Icon Styling */
+.lightning-card .slds-media__figure {
+    margin-right: 10px; /* アイコンの右側余白 */
+}
+
+.lightning-card .slds-media__figure svg {
+    width: 24px; /* アイコンサイズ */
+    height: 24px;
+    fill: #0070d2; /* アイコン色 */
+}

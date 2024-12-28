@@ -2,11 +2,11 @@
     <lightning-card title="問い合わせフォーム" icon-name="action:new">
         <div class="slds-p-around_medium">
             <!-- 名前 -->
-            <lightning-input 
-                label="名前" 
-                name="name" 
-                value={name} 
-                onchange={handleInputChange} 
+            <lightning-input
+                label="名前"
+                name="name"
+                value={name}
+                onchange={handleInputChange}
                 class="field">
             </lightning-input>
             <template if:true={errors.name}>
@@ -14,35 +14,73 @@
             </template>
 
             <!-- メール -->
-            <lightning-input 
-                label="メールアドレス" 
-                name="email" 
-                type="email" 
-                value={email} 
-                onchange={handleInputChange} 
+            <lightning-input
+                label="メールアドレス"
+                name="email"
+                type="email"
+                value={email}
+                onchange={handleInputChange}
                 class="field">
             </lightning-input>
             <template if:true={errors.email}>
                 <p class="error">{errors.email}</p>
             </template>
 
+            <!-- 電話番号 -->
+            <lightning-input
+                label="電話番号"
+                name="phone"
+                type="tel"
+                value={phone}
+                onchange={handleInputChange}
+                class="field">
+            </lightning-input>
+            <template if:true={errors.phone}>
+                <p class="error">{errors.phone}</p>
+            </template>
+
+            <!-- カテゴリ -->
+            <lightning-combobox
+                label="カテゴリ"
+                name="category"
+                value={category}
+                options={categoryOptions}
+                onchange={handleInputChange}
+                class="field">
+            </lightning-combobox>
+
+            <!-- 優先度 -->
+            <fieldset class="field">
+                <legend>優先度</legend>
+                <lightning-radio-group
+                    name="priority"
+                    options={priorityOptions}
+                    value={priority}
+                    onchange={handleInputChange}>
+                </lightning-radio-group>
+            </fieldset>
+
             <!-- 問い合わせ内容 -->
-            <lightning-textarea 
-                label="問い合わせ内容" 
-                name="description" 
-                value={description} 
-                onchange={handleInputChange} 
+            <lightning-textarea
+                label="問い合わせ内容"
+                name="description"
+                value={description}
+                onchange={handleInputChange}
                 class="field">
             </lightning-textarea>
             <template if:true={errors.description}>
                 <p class="error">{errors.description}</p>
             </template>
 
+            <!-- 添付ファイル -->
+            <input type="file" name="attachment" onchange={handleFileChange} />
+            <br>
+
             <!-- 送信ボタン -->
-            <lightning-button 
-                label="送信" 
-                variant="brand" 
-                onclick={handleSubmit} 
+            <lightning-button
+                label="送信"
+                variant="brand"
+                onclick={handleSubmit}
                 disabled={isLoading}>
             </lightning-button>
 

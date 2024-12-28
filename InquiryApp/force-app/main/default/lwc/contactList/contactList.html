@@ -1,0 +1,36 @@
+<template>
+    <lightning-card title="Contact List" icon-name="standard:contact">
+        <!-- 検索ボックス -->
+        <lightning-input
+            type="text"
+            label="Search Contacts"
+            placeholder="Enter First Name, Last Name, or Email"
+            onchange={handleSearchChange}>
+        </lightning-input>
+
+        <!-- データテーブル -->
+        <lightning-datatable
+            key-field="Id"
+            data={paginatedContacts}
+            columns={columns}
+            onsort={handleSort}
+            sorted-by={sortedBy}
+            sorted-direction={sortedDirection}> <!-- 昇順または降順の設定 -->
+        </lightning-datatable>
+
+        <!-- ページネーションボタン -->
+        <div class="pagination">
+            <lightning-button
+                label="Previous"
+                onclick={handlePreviousPage}
+                disabled={isFirstPage}>
+            </lightning-button>
+            <span>ページ {currentPage} / {totalPages}</span>
+            <lightning-button
+                label="Next"
+                onclick={handleNextPage}
+                disabled={isLastPage}>
+            </lightning-button>
+        </div>
+    </lightning-card>
+</template>
